@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>T3nicole</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>T3_nicole</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7475,16 +7475,5355 @@ a.anchor-link {
 </style>
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<main><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=f901e99d-30ac-4769-9d7e-a932dfbb8109">
+<main>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>TAREA CALIFICADA 3</strong></p>
+<p>Nicole Quiroz - 20220217</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Primera-parte">Primera parte<a class="anchor-link" href="#Primera-parte">¶</a></h1>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [151]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span> 
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># link to repo</span>
+
+<span class="n">dataRepo</span> <span class="o">=</span> <span class="s1">'https://github.com/UK-Data-Science/tarea3nicole/raw/main/appendData/'</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [152]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># creating file names into a list:</span>
+<span class="n">numbers</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">fileNames</span><span class="o">=</span><span class="p">[</span><span class="s1">'level'</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">number</span><span class="p">)</span><span class="o">+</span><span class="s1">'.xlsx'</span> <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">]</span>
+
+<span class="c1"># list of file names</span>
+<span class="n">fileNames</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[152]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>['level1.xlsx', 'level2.xlsx', 'level3.xlsx', 'level4.xlsx']</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [153]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># creating the url to each file:</span>
+<span class="n">alltheLinks</span><span class="o">=</span><span class="p">[</span><span class="n">dataRepo</span><span class="o">+</span><span class="n">fn</span> <span class="k">for</span> <span class="n">fn</span> <span class="ow">in</span> <span class="n">fileNames</span><span class="p">]</span>
+<span class="n">alltheLinks</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[153]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>['https://github.com/UK-Data-Science/tarea3nicole/raw/main/appendData/level1.xlsx',
+ 'https://github.com/UK-Data-Science/tarea3nicole/raw/main/appendData/level2.xlsx',
+ 'https://github.com/UK-Data-Science/tarea3nicole/raw/main/appendData/level3.xlsx',
+ 'https://github.com/UK-Data-Science/tarea3nicole/raw/main/appendData/level4.xlsx']</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [154]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>openpyxl
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Requirement already satisfied: openpyxl in c:\users\patricia\anaconda3\envs\version\lib\site-packages (3.1.2)
+Requirement already satisfied: et-xmlfile in c:\users\patricia\anaconda3\envs\version\lib\site-packages (from openpyxl) (1.1.0)
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [155]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># creating list of DFs</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">allDFs</span><span class="o">=</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">link</span><span class="p">)</span> <span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">alltheLinks</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Cleaning-DFs-rows">Cleaning DFs rows<a class="anchor-link" href="#Cleaning-DFs-rows">¶</a></h3>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [156]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">allDFs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[156]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Unnamed: 0</th>
+<th>Table 1. Human Development Index and its components</th>
+<th>Unnamed: 2</th>
+<th>Unnamed: 3</th>
+<th>Unnamed: 4</th>
+<th>Unnamed: 5</th>
+<th>Unnamed: 6</th>
+<th>Unnamed: 7</th>
+<th>Unnamed: 8</th>
+<th>Unnamed: 9</th>
+<th>Unnamed: 10</th>
+<th>Unnamed: 11</th>
+<th>Unnamed: 12</th>
+<th>Unnamed: 13</th>
+<th>Unnamed: 14</th>
+<th>Unnamed: 15</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>1</th>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>SDG3</td>
+<td>NaN</td>
+<td>SDG4.3</td>
+<td>NaN</td>
+<td>SDG4.4</td>
+<td>NaN</td>
+<td>SDG8.5</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>2</th>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>3</th>
+<td>HDI rank</td>
+<td>Country</td>
+<td>Human Development Index (HDI)</td>
+<td>NaN</td>
+<td>Life expectancy at birth</td>
+<td>NaN</td>
+<td>Expected years of schooling</td>
+<td>NaN</td>
+<td>Mean years of schooling</td>
+<td>NaN</td>
+<td>Gross national income (GNI) per capita</td>
+<td>NaN</td>
+<td>GNI per capita rank minus HDI rank</td>
+<td>NaN</td>
+<td>HDI rank</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>4</th>
+<td>NaN</td>
+<td>NaN</td>
+<td>Value</td>
+<td>NaN</td>
+<td>(years)</td>
+<td>NaN</td>
+<td>(years)</td>
+<td>NaN</td>
+<td>(years)</td>
+<td>NaN</td>
+<td>(2017 PPP $)</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [157]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">allDFs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[157]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>HDI rank</th>
+<th>Country</th>
+<th>Human Development Index (HDI)</th>
+<th>Life expectancy at birth</th>
+<th>Expected years of schooling</th>
+<th>Mean years of schooling</th>
+<th>Unnamed: 6</th>
+<th>Gross national income (GNI) per capita</th>
+<th>Unnamed: 8</th>
+<th>GNI per capita rank minus HDI rank</th>
+<th>Unnamed: 10</th>
+<th>HDI rank.1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>NaN</td>
+<td>NaN</td>
+<td>2021.000</td>
+<td>2021.0000</td>
+<td>2021.00000</td>
+<td>2021.000000</td>
+<td>a</td>
+<td>2021.00000</td>
+<td>NaN</td>
+<td>2021.0</td>
+<td>b</td>
+<td>2020.0</td>
+</tr>
+<tr>
+<th>1</th>
+<td>NaN</td>
+<td>HIGH HUMAN DEVELOPMENT</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>2</th>
+<td>67.0</td>
+<td>Albania</td>
+<td>0.796</td>
+<td>76.4626</td>
+<td>14.44800</td>
+<td>11.286455</td>
+<td>e</td>
+<td>14131.11039</td>
+<td>NaN</td>
+<td>17.0</td>
+<td>NaN</td>
+<td>68.0</td>
+</tr>
+<tr>
+<th>3</th>
+<td>68.0</td>
+<td>Bulgaria</td>
+<td>0.795</td>
+<td>71.7980</td>
+<td>13.89729</td>
+<td>11.413180</td>
+<td>NaN</td>
+<td>23078.95595</td>
+<td>NaN</td>
+<td>-8.0</td>
+<td>NaN</td>
+<td>64.0</td>
+</tr>
+<tr>
+<th>4</th>
+<td>68.0</td>
+<td>Grenada</td>
+<td>0.795</td>
+<td>74.9362</td>
+<td>18.66202</td>
+<td>9.032104</td>
+<td>l</td>
+<td>13483.57740</td>
+<td>NaN</td>
+<td>18.0</td>
+<td>NaN</td>
+<td>70.0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [158]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">allDFs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[158]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>HDI rank</th>
+<th>Country</th>
+<th>Human Development Index (HDI)</th>
+<th>Unnamed: 3</th>
+<th>Life expectancy at birth</th>
+<th>Unnamed: 5</th>
+<th>Expected years of schooling</th>
+<th>Unnamed: 7</th>
+<th>Mean years of schooling</th>
+<th>Unnamed: 9</th>
+<th>Gross national income (GNI) per capita</th>
+<th>Unnamed: 11</th>
+<th>GNI per capita rank minus HDI rank</th>
+<th>Unnamed: 13</th>
+<th>HDI rank.1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>NaN</td>
+<td>NaN</td>
+<td>2021.000</td>
+<td>NaN</td>
+<td>2021.0000</td>
+<td>NaN</td>
+<td>2021.000000</td>
+<td>a</td>
+<td>2021.00000</td>
+<td>a</td>
+<td>2021.000000</td>
+<td>NaN</td>
+<td>2021.0</td>
+<td>b</td>
+<td>2020.0</td>
+</tr>
+<tr>
+<th>1</th>
+<td>NaN</td>
+<td>MEDIUM HUMAN DEVELOPMENT</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>2</th>
+<td>116.0</td>
+<td>Philippines</td>
+<td>0.699</td>
+<td>NaN</td>
+<td>69.2664</td>
+<td>NaN</td>
+<td>13.126570</td>
+<td>NaN</td>
+<td>8.96910</td>
+<td>NaN</td>
+<td>8920.428468</td>
+<td>NaN</td>
+<td>-3.0</td>
+<td>NaN</td>
+<td>113.0</td>
+</tr>
+<tr>
+<th>3</th>
+<td>117.0</td>
+<td>Botswana</td>
+<td>0.693</td>
+<td>NaN</td>
+<td>61.1409</td>
+<td>NaN</td>
+<td>12.265138</td>
+<td>e</td>
+<td>10.34000</td>
+<td>NaN</td>
+<td>16198.318410</td>
+<td>NaN</td>
+<td>-43.0</td>
+<td>NaN</td>
+<td>110.0</td>
+</tr>
+<tr>
+<th>4</th>
+<td>118.0</td>
+<td>Bolivia (Plurinational State of)</td>
+<td>0.692</td>
+<td>NaN</td>
+<td>63.6304</td>
+<td>NaN</td>
+<td>14.946971</td>
+<td>NaN</td>
+<td>9.82775</td>
+<td>NaN</td>
+<td>8111.190194</td>
+<td>NaN</td>
+<td>0.0</td>
+<td>NaN</td>
+<td>119.0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [159]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">allDFs</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[159]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>HDI rank</th>
+<th>Country</th>
+<th>Unnamed: 2</th>
+<th>Human Development Index (HDI)</th>
+<th>Life expectancy at birth</th>
+<th>Expected years of schooling</th>
+<th>Mean years of schooling</th>
+<th>Gross national income (GNI) per capita</th>
+<th>GNI per capita rank minus HDI rank</th>
+<th>le</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>160</td>
+<td>Tanzania (United Republic of)</td>
+<td>LOW HUMAN DEVELOPMENT</td>
+<td>0.549</td>
+<td>66.2007</td>
+<td>9.221490</td>
+<td>6.372899</td>
+<td>2664.329096</td>
+<td>7</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>1</th>
+<td>161</td>
+<td>Pakistan</td>
+<td>LOW HUMAN DEVELOPMENT</td>
+<td>0.544</td>
+<td>66.0979</td>
+<td>8.658350</td>
+<td>4.536330</td>
+<td>4623.705430</td>
+<td>-19</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>2</th>
+<td>162</td>
+<td>Togo</td>
+<td>LOW HUMAN DEVELOPMENT</td>
+<td>0.539</td>
+<td>61.6194</td>
+<td>12.950494</td>
+<td>5.016807</td>
+<td>2166.619062</td>
+<td>12</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>3</th>
+<td>163</td>
+<td>Haiti</td>
+<td>LOW HUMAN DEVELOPMENT</td>
+<td>0.535</td>
+<td>63.1924</td>
+<td>9.700000</td>
+<td>5.554000</td>
+<td>2847.500746</td>
+<td>2</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>4</th>
+<td>163</td>
+<td>Nigeria</td>
+<td>LOW HUMAN DEVELOPMENT</td>
+<td>0.535</td>
+<td>52.6760</td>
+<td>10.127584</td>
+<td>7.181074</td>
+<td>4790.284425</td>
+<td>-22</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Fixing column names in the first DF</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [160]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">allDFs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">columns</span><span class="o">=</span><span class="n">allDFs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="p">:]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">allDFs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[160]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>HDI rank</th>
+<th>Country</th>
+<th>Human Development Index (HDI)</th>
+<th>NaN</th>
+<th>Life expectancy at birth</th>
+<th>NaN</th>
+<th>Expected years of schooling</th>
+<th>NaN</th>
+<th>Mean years of schooling</th>
+<th>NaN</th>
+<th>Gross national income (GNI) per capita</th>
+<th>NaN</th>
+<th>GNI per capita rank minus HDI rank</th>
+<th>NaN</th>
+<th>HDI rank</th>
+<th>NaN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>1</th>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>SDG3</td>
+<td>NaN</td>
+<td>SDG4.3</td>
+<td>NaN</td>
+<td>SDG4.4</td>
+<td>NaN</td>
+<td>SDG8.5</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>2</th>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>3</th>
+<td>HDI rank</td>
+<td>Country</td>
+<td>Human Development Index (HDI)</td>
+<td>NaN</td>
+<td>Life expectancy at birth</td>
+<td>NaN</td>
+<td>Expected years of schooling</td>
+<td>NaN</td>
+<td>Mean years of schooling</td>
+<td>NaN</td>
+<td>Gross national income (GNI) per capita</td>
+<td>NaN</td>
+<td>GNI per capita rank minus HDI rank</td>
+<td>NaN</td>
+<td>HDI rank</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>4</th>
+<td>NaN</td>
+<td>NaN</td>
+<td>Value</td>
+<td>NaN</td>
+<td>(years)</td>
+<td>NaN</td>
+<td>(years)</td>
+<td>NaN</td>
+<td>(years)</td>
+<td>NaN</td>
+<td>(2017 PPP $)</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Fixing repeated 'HDI rank' columns in the first DF</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [161]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">column_names</span><span class="o">=</span> <span class="n">allDFs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">column_names</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[161]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>['HDI rank',
+ 'Country',
+ 'Human Development Index (HDI) ',
+ nan,
+ 'Life expectancy at birth',
+ nan,
+ 'Expected years of schooling',
+ nan,
+ 'Mean years of schooling',
+ nan,
+ 'Gross national income (GNI) per capita',
+ nan,
+ 'GNI per capita rank minus HDI rank',
+ nan,
+ 'HDI rank',
+ nan]</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [162]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Contador para las apariciones de 'HDI rank'</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># Iterando a través de la lista</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">column_names</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">col</span> <span class="o">==</span> <span class="s1">'HDI rank'</span><span class="p">:</span>
+        <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="c1"># Si es la segunda aparición, renombrar</span>
+        <span class="k">if</span> <span class="n">count</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">column_names</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'HDI rank.1'</span>
+            <span class="k">break</span>
+
+<span class="n">column_names</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[162]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>['HDI rank',
+ 'Country',
+ 'Human Development Index (HDI) ',
+ nan,
+ 'Life expectancy at birth',
+ nan,
+ 'Expected years of schooling',
+ nan,
+ 'Mean years of schooling',
+ nan,
+ 'Gross national income (GNI) per capita',
+ nan,
+ 'GNI per capita rank minus HDI rank',
+ nan,
+ 'HDI rank.1',
+ nan]</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [163]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">allDFs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">columns</span><span class="o">=</span><span class="n">column_names</span>
+<span class="n">allDFs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[163]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>HDI rank</th>
+<th>Country</th>
+<th>Human Development Index (HDI)</th>
+<th>NaN</th>
+<th>Life expectancy at birth</th>
+<th>NaN</th>
+<th>Expected years of schooling</th>
+<th>NaN</th>
+<th>Mean years of schooling</th>
+<th>NaN</th>
+<th>Gross national income (GNI) per capita</th>
+<th>NaN</th>
+<th>GNI per capita rank minus HDI rank</th>
+<th>NaN</th>
+<th>HDI rank.1</th>
+<th>NaN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>1</th>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>SDG3</td>
+<td>NaN</td>
+<td>SDG4.3</td>
+<td>NaN</td>
+<td>SDG4.4</td>
+<td>NaN</td>
+<td>SDG8.5</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>2</th>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>3</th>
+<td>HDI rank</td>
+<td>Country</td>
+<td>Human Development Index (HDI)</td>
+<td>NaN</td>
+<td>Life expectancy at birth</td>
+<td>NaN</td>
+<td>Expected years of schooling</td>
+<td>NaN</td>
+<td>Mean years of schooling</td>
+<td>NaN</td>
+<td>Gross national income (GNI) per capita</td>
+<td>NaN</td>
+<td>GNI per capita rank minus HDI rank</td>
+<td>NaN</td>
+<td>HDI rank</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>4</th>
+<td>NaN</td>
+<td>NaN</td>
+<td>Value</td>
+<td>NaN</td>
+<td>(years)</td>
+<td>NaN</td>
+<td>(years)</td>
+<td>NaN</td>
+<td>(years)</td>
+<td>NaN</td>
+<td>(2017 PPP $)</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Removing unnecessary rows in each of the DFS</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [164]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#Creating a function to clean the rows</span>
+
+<span class="k">def</span> <span class="nf">clean_rows</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">column_name</span><span class="p">):</span>
+        <span class="n">df</span><span class="p">[</span><span class="n">column_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">column_name</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">'coerce'</span><span class="p">)</span>
+        <span class="n">cleaned_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="n">column_name</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">cleaned_df</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [165]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Cleaning each Data Frame using the function</span>
+<span class="n">allDFs</span> <span class="o">=</span> <span class="p">[</span><span class="n">clean_rows</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s1">'HDI rank'</span><span class="p">)</span> <span class="k">for</span> <span class="n">df</span> <span class="ow">in</span> <span class="n">allDFs</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [166]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">allDFs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[166]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>HDI rank</th>
+<th>Country</th>
+<th>Human Development Index (HDI)</th>
+<th>NaN</th>
+<th>Life expectancy at birth</th>
+<th>NaN</th>
+<th>Expected years of schooling</th>
+<th>NaN</th>
+<th>Mean years of schooling</th>
+<th>NaN</th>
+<th>Gross national income (GNI) per capita</th>
+<th>NaN</th>
+<th>GNI per capita rank minus HDI rank</th>
+<th>NaN</th>
+<th>HDI rank.1</th>
+<th>NaN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>6</th>
+<td>1.0</td>
+<td>Switzerland</td>
+<td>0.962</td>
+<td>NaN</td>
+<td>83.9872</td>
+<td>NaN</td>
+<td>16.500299</td>
+<td>NaN</td>
+<td>13.85966</td>
+<td>NaN</td>
+<td>66933.00454</td>
+<td>NaN</td>
+<td>5</td>
+<td>NaN</td>
+<td>3</td>
+<td>VERY HIGH HUMAN DEVELOPMENT</td>
+</tr>
+<tr>
+<th>7</th>
+<td>2.0</td>
+<td>Norway</td>
+<td>0.961</td>
+<td>NaN</td>
+<td>83.2339</td>
+<td>NaN</td>
+<td>18.1852</td>
+<td>c</td>
+<td>13.00363</td>
+<td>NaN</td>
+<td>64660.10622</td>
+<td>NaN</td>
+<td>6</td>
+<td>NaN</td>
+<td>1</td>
+<td>VERY HIGH HUMAN DEVELOPMENT</td>
+</tr>
+<tr>
+<th>8</th>
+<td>3.0</td>
+<td>Iceland</td>
+<td>0.959</td>
+<td>NaN</td>
+<td>82.6782</td>
+<td>NaN</td>
+<td>19.163059</td>
+<td>c</td>
+<td>13.76717</td>
+<td>NaN</td>
+<td>55782.04981</td>
+<td>NaN</td>
+<td>11</td>
+<td>NaN</td>
+<td>2</td>
+<td>VERY HIGH HUMAN DEVELOPMENT</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [167]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">allDFs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[167]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>HDI rank</th>
+<th>Country</th>
+<th>Human Development Index (HDI)</th>
+<th>Life expectancy at birth</th>
+<th>Expected years of schooling</th>
+<th>Mean years of schooling</th>
+<th>Unnamed: 6</th>
+<th>Gross national income (GNI) per capita</th>
+<th>Unnamed: 8</th>
+<th>GNI per capita rank minus HDI rank</th>
+<th>Unnamed: 10</th>
+<th>HDI rank.1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>2</th>
+<td>67.0</td>
+<td>Albania</td>
+<td>0.796</td>
+<td>76.4626</td>
+<td>14.44800</td>
+<td>11.286455</td>
+<td>e</td>
+<td>14131.11039</td>
+<td>NaN</td>
+<td>17.0</td>
+<td>NaN</td>
+<td>68.0</td>
+</tr>
+<tr>
+<th>3</th>
+<td>68.0</td>
+<td>Bulgaria</td>
+<td>0.795</td>
+<td>71.7980</td>
+<td>13.89729</td>
+<td>11.413180</td>
+<td>NaN</td>
+<td>23078.95595</td>
+<td>NaN</td>
+<td>-8.0</td>
+<td>NaN</td>
+<td>64.0</td>
+</tr>
+<tr>
+<th>4</th>
+<td>68.0</td>
+<td>Grenada</td>
+<td>0.795</td>
+<td>74.9362</td>
+<td>18.66202</td>
+<td>9.032104</td>
+<td>l</td>
+<td>13483.57740</td>
+<td>NaN</td>
+<td>18.0</td>
+<td>NaN</td>
+<td>70.0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [168]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">allDFs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[168]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>HDI rank</th>
+<th>Country</th>
+<th>Human Development Index (HDI)</th>
+<th>Unnamed: 3</th>
+<th>Life expectancy at birth</th>
+<th>Unnamed: 5</th>
+<th>Expected years of schooling</th>
+<th>Unnamed: 7</th>
+<th>Mean years of schooling</th>
+<th>Unnamed: 9</th>
+<th>Gross national income (GNI) per capita</th>
+<th>Unnamed: 11</th>
+<th>GNI per capita rank minus HDI rank</th>
+<th>Unnamed: 13</th>
+<th>HDI rank.1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>2</th>
+<td>116.0</td>
+<td>Philippines</td>
+<td>0.699</td>
+<td>NaN</td>
+<td>69.2664</td>
+<td>NaN</td>
+<td>13.126570</td>
+<td>NaN</td>
+<td>8.96910</td>
+<td>NaN</td>
+<td>8920.428468</td>
+<td>NaN</td>
+<td>-3.0</td>
+<td>NaN</td>
+<td>113.0</td>
+</tr>
+<tr>
+<th>3</th>
+<td>117.0</td>
+<td>Botswana</td>
+<td>0.693</td>
+<td>NaN</td>
+<td>61.1409</td>
+<td>NaN</td>
+<td>12.265138</td>
+<td>e</td>
+<td>10.34000</td>
+<td>NaN</td>
+<td>16198.318410</td>
+<td>NaN</td>
+<td>-43.0</td>
+<td>NaN</td>
+<td>110.0</td>
+</tr>
+<tr>
+<th>4</th>
+<td>118.0</td>
+<td>Bolivia (Plurinational State of)</td>
+<td>0.692</td>
+<td>NaN</td>
+<td>63.6304</td>
+<td>NaN</td>
+<td>14.946971</td>
+<td>NaN</td>
+<td>9.82775</td>
+<td>NaN</td>
+<td>8111.190194</td>
+<td>NaN</td>
+<td>0.0</td>
+<td>NaN</td>
+<td>119.0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [169]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">allDFs</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[169]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>HDI rank</th>
+<th>Country</th>
+<th>Unnamed: 2</th>
+<th>Human Development Index (HDI)</th>
+<th>Life expectancy at birth</th>
+<th>Expected years of schooling</th>
+<th>Mean years of schooling</th>
+<th>Gross national income (GNI) per capita</th>
+<th>GNI per capita rank minus HDI rank</th>
+<th>le</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>160</td>
+<td>Tanzania (United Republic of)</td>
+<td>LOW HUMAN DEVELOPMENT</td>
+<td>0.549</td>
+<td>66.2007</td>
+<td>9.221490</td>
+<td>6.372899</td>
+<td>2664.329096</td>
+<td>7</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>1</th>
+<td>161</td>
+<td>Pakistan</td>
+<td>LOW HUMAN DEVELOPMENT</td>
+<td>0.544</td>
+<td>66.0979</td>
+<td>8.658350</td>
+<td>4.536330</td>
+<td>4623.705430</td>
+<td>-19</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>2</th>
+<td>162</td>
+<td>Togo</td>
+<td>LOW HUMAN DEVELOPMENT</td>
+<td>0.539</td>
+<td>61.6194</td>
+<td>12.950494</td>
+<td>5.016807</td>
+<td>2166.619062</td>
+<td>12</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Appending">Appending<a class="anchor-link" href="#Appending">¶</a></h3>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [170]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># saving column names</span>
+<span class="n">allColumnNames</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">df</span> <span class="ow">in</span> <span class="n">allDFs</span><span class="p">:</span>
+    <span class="n">allColumnNames</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [171]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># checking how many columns per df</span>
+<span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">cols</span><span class="p">)</span> <span class="k">for</span> <span class="n">cols</span> <span class="ow">in</span> <span class="n">allColumnNames</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[171]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>[11, 12, 15, 10]</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [172]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># details of common columns</span>
+<span class="n">commonColumns</span><span class="o">=</span><span class="nb">set</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="o">*</span><span class="n">allColumnNames</span><span class="p">)</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">commonColumns</span><span class="p">),</span><span class="n">commonColumns</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[172]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>(8,
+ {'Country',
+  'Expected years of schooling',
+  'GNI per capita rank minus HDI rank',
+  'Gross national income (GNI) per capita',
+  'HDI rank',
+  'Human Development Index (HDI) ',
+  'Life expectancy at birth',
+  'Mean years of schooling'})</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [173]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># all minus the common</span>
+<span class="nb">set</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="o">*</span><span class="n">allColumnNames</span><span class="p">)</span><span class="o">-</span><span class="n">commonColumns</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[173]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>{'HDI rank.1',
+ 'Unnamed: 10',
+ 'Unnamed: 11',
+ 'Unnamed: 13',
+ 'Unnamed: 2',
+ 'Unnamed: 3',
+ 'Unnamed: 5',
+ 'Unnamed: 6',
+ 'Unnamed: 7',
+ 'Unnamed: 8',
+ 'Unnamed: 9',
+ 'le',
+ nan,
+ nan}</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [174]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># DFs with the common columns</span>
+<span class="n">allDFs_sameNames</span><span class="o">=</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="nb">list</span><span class="p">(</span><span class="n">commonColumns</span><span class="p">)]</span> <span class="k">for</span> <span class="n">df</span> <span class="ow">in</span> <span class="n">allDFs</span><span class="p">]</span>
+<span class="n">allDFs_sameNames</span><span class="o">=</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">for</span> <span class="n">df</span> <span class="ow">in</span> <span class="n">allDFs_sameNames</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [175]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># appending</span>
+<span class="n">allDFsConcat</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">allDFs_sameNames</span><span class="p">)</span>
+<span class="n">allDFsConcat</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[175]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Gross national income (GNI) per capita</th>
+<th>GNI per capita rank minus HDI rank</th>
+<th>Human Development Index (HDI)</th>
+<th>Mean years of schooling</th>
+<th>HDI rank</th>
+<th>Life expectancy at birth</th>
+<th>Expected years of schooling</th>
+<th>Country</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>66933.00454</td>
+<td>5</td>
+<td>0.962</td>
+<td>13.85966</td>
+<td>1.0</td>
+<td>83.9872</td>
+<td>16.500299</td>
+<td>Switzerland</td>
+</tr>
+<tr>
+<th>1</th>
+<td>64660.10622</td>
+<td>6</td>
+<td>0.961</td>
+<td>13.00363</td>
+<td>2.0</td>
+<td>83.2339</td>
+<td>18.1852</td>
+<td>Norway</td>
+</tr>
+<tr>
+<th>2</th>
+<td>55782.04981</td>
+<td>11</td>
+<td>0.959</td>
+<td>13.76717</td>
+<td>3.0</td>
+<td>82.6782</td>
+<td>19.163059</td>
+<td>Iceland</td>
+</tr>
+<tr>
+<th>3</th>
+<td>62606.8454</td>
+<td>6</td>
+<td>0.952</td>
+<td>12.22621</td>
+<td>4.0</td>
+<td>85.4734</td>
+<td>17.27817</td>
+<td>Hong Kong, China (SAR)</td>
+</tr>
+<tr>
+<th>4</th>
+<td>49238.43335</td>
+<td>18</td>
+<td>0.951</td>
+<td>12.72682</td>
+<td>5.0</td>
+<td>84.5265</td>
+<td>21.05459</td>
+<td>Australia</td>
+</tr>
+<tr>
+<th>...</th>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<th>27</th>
+<td>731.786709</td>
+<td>4</td>
+<td>0.426</td>
+<td>3.129267</td>
+<td>187.0</td>
+<td>61.6627</td>
+<td>10.722722</td>
+<td>Burundi</td>
+</tr>
+<tr>
+<th>28</th>
+<td>966.058611</td>
+<td>1</td>
+<td>0.404</td>
+<td>4.334</td>
+<td>188.0</td>
+<td>53.8947</td>
+<td>8.040172</td>
+<td>Central African Republic</td>
+</tr>
+<tr>
+<th>29</th>
+<td>1239.866936</td>
+<td>-3</td>
+<td>0.4</td>
+<td>2.116717</td>
+<td>189.0</td>
+<td>61.5763</td>
+<td>6.957112</td>
+<td>Niger</td>
+</tr>
+<tr>
+<th>30</th>
+<td>1364.169417</td>
+<td>-7</td>
+<td>0.394</td>
+<td>2.573774</td>
+<td>190.0</td>
+<td>52.5254</td>
+<td>8.035914</td>
+<td>Chad</td>
+</tr>
+<tr>
+<th>31</th>
+<td>767.787</td>
+<td>-1</td>
+<td>0.385</td>
+<td>5.72614</td>
+<td>191.0</td>
+<td>54.9752</td>
+<td>5.54251</td>
+<td>South Sudan</td>
+</tr>
+</tbody>
+</table>
+<p>191 rows × 8 columns</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Ordenando">Ordenando<a class="anchor-link" href="#Ordenando">¶</a></h3>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [176]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">allDFsConcat</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="s1">'HDI rank'</span><span class="p">,</span> <span class="s1">'Country'</span><span class="p">],</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">allDFsConcat</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[176]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th></th>
+<th>Gross national income (GNI) per capita</th>
+<th>GNI per capita rank minus HDI rank</th>
+<th>Human Development Index (HDI)</th>
+<th>Mean years of schooling</th>
+<th>Life expectancy at birth</th>
+<th>Expected years of schooling</th>
+</tr>
+<tr>
+<th>HDI rank</th>
+<th>Country</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>1.0</th>
+<th>Switzerland</th>
+<td>66933.00454</td>
+<td>5</td>
+<td>0.962</td>
+<td>13.85966</td>
+<td>83.9872</td>
+<td>16.500299</td>
+</tr>
+<tr>
+<th>2.0</th>
+<th>Norway</th>
+<td>64660.10622</td>
+<td>6</td>
+<td>0.961</td>
+<td>13.00363</td>
+<td>83.2339</td>
+<td>18.1852</td>
+</tr>
+<tr>
+<th>3.0</th>
+<th>Iceland</th>
+<td>55782.04981</td>
+<td>11</td>
+<td>0.959</td>
+<td>13.76717</td>
+<td>82.6782</td>
+<td>19.163059</td>
+</tr>
+<tr>
+<th>4.0</th>
+<th>Hong Kong, China (SAR)</th>
+<td>62606.8454</td>
+<td>6</td>
+<td>0.952</td>
+<td>12.22621</td>
+<td>85.4734</td>
+<td>17.27817</td>
+</tr>
+<tr>
+<th>5.0</th>
+<th>Australia</th>
+<td>49238.43335</td>
+<td>18</td>
+<td>0.951</td>
+<td>12.72682</td>
+<td>84.5265</td>
+<td>21.05459</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [177]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># ordering column names alphabetically</span>
+<span class="n">allDFsConcat</span><span class="o">.</span><span class="n">sort_index</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># by row index will be axis=0</span>
+<span class="n">allDFsConcat</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[177]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th></th>
+<th>Expected years of schooling</th>
+<th>GNI per capita rank minus HDI rank</th>
+<th>Gross national income (GNI) per capita</th>
+<th>Human Development Index (HDI)</th>
+<th>Life expectancy at birth</th>
+<th>Mean years of schooling</th>
+</tr>
+<tr>
+<th>HDI rank</th>
+<th>Country</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>1.0</th>
+<th>Switzerland</th>
+<td>16.500299</td>
+<td>5</td>
+<td>66933.00454</td>
+<td>0.962</td>
+<td>83.9872</td>
+<td>13.85966</td>
+</tr>
+<tr>
+<th>2.0</th>
+<th>Norway</th>
+<td>18.1852</td>
+<td>6</td>
+<td>64660.10622</td>
+<td>0.961</td>
+<td>83.2339</td>
+<td>13.00363</td>
+</tr>
+<tr>
+<th>3.0</th>
+<th>Iceland</th>
+<td>19.163059</td>
+<td>11</td>
+<td>55782.04981</td>
+<td>0.959</td>
+<td>82.6782</td>
+<td>13.76717</td>
+</tr>
+<tr>
+<th>4.0</th>
+<th>Hong Kong, China (SAR)</th>
+<td>17.27817</td>
+<td>6</td>
+<td>62606.8454</td>
+<td>0.952</td>
+<td>85.4734</td>
+<td>12.22621</td>
+</tr>
+<tr>
+<th>5.0</th>
+<th>Australia</th>
+<td>21.05459</td>
+<td>18</td>
+<td>49238.43335</td>
+<td>0.951</td>
+<td>84.5265</td>
+<td>12.72682</td>
+</tr>
+<tr>
+<th>...</th>
+<th>...</th>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<th>187.0</th>
+<th>Burundi</th>
+<td>10.722722</td>
+<td>4</td>
+<td>731.786709</td>
+<td>0.426</td>
+<td>61.6627</td>
+<td>3.129267</td>
+</tr>
+<tr>
+<th>188.0</th>
+<th>Central African Republic</th>
+<td>8.040172</td>
+<td>1</td>
+<td>966.058611</td>
+<td>0.404</td>
+<td>53.8947</td>
+<td>4.334</td>
+</tr>
+<tr>
+<th>189.0</th>
+<th>Niger</th>
+<td>6.957112</td>
+<td>-3</td>
+<td>1239.866936</td>
+<td>0.4</td>
+<td>61.5763</td>
+<td>2.116717</td>
+</tr>
+<tr>
+<th>190.0</th>
+<th>Chad</th>
+<td>8.035914</td>
+<td>-7</td>
+<td>1364.169417</td>
+<td>0.394</td>
+<td>52.5254</td>
+<td>2.573774</td>
+</tr>
+<tr>
+<th>191.0</th>
+<th>South Sudan</th>
+<td>5.54251</td>
+<td>-1</td>
+<td>767.787</td>
+<td>0.385</td>
+<td>54.9752</td>
+<td>5.72614</td>
+</tr>
+</tbody>
+</table>
+<p>191 rows × 6 columns</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [178]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># indexes will be columns</span>
+<span class="n">allDFsConcat</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">allDFsConcat</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[178]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>HDI rank</th>
+<th>Country</th>
+<th>Expected years of schooling</th>
+<th>GNI per capita rank minus HDI rank</th>
+<th>Gross national income (GNI) per capita</th>
+<th>Human Development Index (HDI)</th>
+<th>Life expectancy at birth</th>
+<th>Mean years of schooling</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>1.0</td>
+<td>Switzerland</td>
+<td>16.500299</td>
+<td>5</td>
+<td>66933.00454</td>
+<td>0.962</td>
+<td>83.9872</td>
+<td>13.85966</td>
+</tr>
+<tr>
+<th>1</th>
+<td>2.0</td>
+<td>Norway</td>
+<td>18.1852</td>
+<td>6</td>
+<td>64660.10622</td>
+<td>0.961</td>
+<td>83.2339</td>
+<td>13.00363</td>
+</tr>
+<tr>
+<th>2</th>
+<td>3.0</td>
+<td>Iceland</td>
+<td>19.163059</td>
+<td>11</td>
+<td>55782.04981</td>
+<td>0.959</td>
+<td>82.6782</td>
+<td>13.76717</td>
+</tr>
+<tr>
+<th>3</th>
+<td>4.0</td>
+<td>Hong Kong, China (SAR)</td>
+<td>17.27817</td>
+<td>6</td>
+<td>62606.8454</td>
+<td>0.952</td>
+<td>85.4734</td>
+<td>12.22621</td>
+</tr>
+<tr>
+<th>4</th>
+<td>5.0</td>
+<td>Australia</td>
+<td>21.05459</td>
+<td>18</td>
+<td>49238.43335</td>
+<td>0.951</td>
+<td>84.5265</td>
+<td>12.72682</td>
+</tr>
+<tr>
+<th>...</th>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<th>186</th>
+<td>187.0</td>
+<td>Burundi</td>
+<td>10.722722</td>
+<td>4</td>
+<td>731.786709</td>
+<td>0.426</td>
+<td>61.6627</td>
+<td>3.129267</td>
+</tr>
+<tr>
+<th>187</th>
+<td>188.0</td>
+<td>Central African Republic</td>
+<td>8.040172</td>
+<td>1</td>
+<td>966.058611</td>
+<td>0.404</td>
+<td>53.8947</td>
+<td>4.334</td>
+</tr>
+<tr>
+<th>188</th>
+<td>189.0</td>
+<td>Niger</td>
+<td>6.957112</td>
+<td>-3</td>
+<td>1239.866936</td>
+<td>0.4</td>
+<td>61.5763</td>
+<td>2.116717</td>
+</tr>
+<tr>
+<th>189</th>
+<td>190.0</td>
+<td>Chad</td>
+<td>8.035914</td>
+<td>-7</td>
+<td>1364.169417</td>
+<td>0.394</td>
+<td>52.5254</td>
+<td>2.573774</td>
+</tr>
+<tr>
+<th>190</th>
+<td>191.0</td>
+<td>South Sudan</td>
+<td>5.54251</td>
+<td>-1</td>
+<td>767.787</td>
+<td>0.385</td>
+<td>54.9752</td>
+<td>5.72614</td>
+</tr>
+</tbody>
+</table>
+<p>191 rows × 8 columns</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Cleaning column names</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [179]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># see column names</span>
+<span class="n">allDFsConcat</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[179]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>['HDI rank',
+ 'Country',
+ 'Expected years of schooling',
+ 'GNI per capita rank minus HDI rank',
+ 'Gross national income (GNI) per capita',
+ 'Human Development Index (HDI) ',
+ 'Life expectancy at birth',
+ 'Mean years of schooling']</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [180]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># clean column names</span>
+<span class="n">allDFsConcat</span><span class="o">.</span><span class="n">columns</span><span class="o">=</span><span class="n">allDFsConcat</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'\(\w*\s*\w*\W*\)'</span><span class="p">,</span><span class="s1">''</span><span class="p">,</span><span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">title</span><span class="p">()</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"\s"</span><span class="p">,</span><span class="s2">"_"</span><span class="p">,</span><span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1">#see</span>
+<span class="n">allDFsConcat</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[180]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>['Hdi_Rank',
+ 'Country',
+ 'Expected_Years_Of_Schooling',
+ 'Gni_Per_Capita_Rank_Minus_Hdi_Rank',
+ 'Gross_National_Income__Per_Capita',
+ 'Human_Development_Index__',
+ 'Life_Expectancy_At_Birth',
+ 'Mean_Years_Of_Schooling']</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [181]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># overwriting country</span>
+<span class="n">allDFsConcat</span><span class="o">.</span><span class="n">Country</span><span class="o">=</span><span class="n">allDFsConcat</span><span class="o">.</span><span class="n">Country</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+
+<span class="n">allDFsConcat</span><span class="o">.</span><span class="n">Country</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[181]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>0                   SWITZERLAND
+1                        NORWAY
+2                       ICELAND
+3        HONG KONG, CHINA (SAR)
+4                     AUSTRALIA
+                 ...           
+186                     BURUNDI
+187    CENTRAL AFRICAN REPUBLIC
+188                       NIGER
+189                        CHAD
+190                 SOUTH SUDAN
+Name: Country, Length: 191, dtype: object</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Reviewing the data</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [182]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">allDFsConcat</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 191 entries, 0 to 190
+Data columns (total 8 columns):
+ #   Column                              Non-Null Count  Dtype  
+---  ------                              --------------  -----  
+ 0   Hdi_Rank                            191 non-null    float64
+ 1   Country                             191 non-null    object 
+ 2   Expected_Years_Of_Schooling         191 non-null    object 
+ 3   Gni_Per_Capita_Rank_Minus_Hdi_Rank  191 non-null    object 
+ 4   Gross_National_Income__Per_Capita   191 non-null    object 
+ 5   Human_Development_Index__           191 non-null    object 
+ 6   Life_Expectancy_At_Birth            191 non-null    object 
+ 7   Mean_Years_Of_Schooling             191 non-null    object 
+dtypes: float64(1), object(7)
+memory usage: 12.1+ KB
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [183]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">allDFsConcat</span><span class="o">.</span><span class="n">Expected_Years_Of_Schooling</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[183]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>Expected_Years_Of_Schooling
+16.500299    1
+11.874620    1
+12.991690    1
+14.151910    1
+12.671348    1
+            ..
+14.448000    1
+13.897290    1
+18.662020    1
+15.713385    1
+5.542510     1
+Name: count, Length: 191, dtype: int64</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [184]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">columns_to_convert</span> <span class="o">=</span> <span class="n">allDFsConcat</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">difference</span><span class="p">([</span><span class="s1">'Country'</span><span class="p">])</span>
+<span class="n">allDFsConcat</span><span class="p">[</span><span class="n">columns_to_convert</span><span class="p">]</span> <span class="o">=</span> <span class="n">allDFsConcat</span><span class="p">[</span><span class="n">columns_to_convert</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">'coerce'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [185]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">allDFsConcat</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 191 entries, 0 to 190
+Data columns (total 8 columns):
+ #   Column                              Non-Null Count  Dtype  
+---  ------                              --------------  -----  
+ 0   Hdi_Rank                            191 non-null    float64
+ 1   Country                             191 non-null    object 
+ 2   Expected_Years_Of_Schooling         191 non-null    float64
+ 3   Gni_Per_Capita_Rank_Minus_Hdi_Rank  191 non-null    int64  
+ 4   Gross_National_Income__Per_Capita   191 non-null    float64
+ 5   Human_Development_Index__           191 non-null    float64
+ 6   Life_Expectancy_At_Birth            191 non-null    float64
+ 7   Mean_Years_Of_Schooling             191 non-null    float64
+dtypes: float64(6), int64(1), object(1)
+memory usage: 12.1+ KB
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [186]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">allDFsConcat</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[186]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Hdi_Rank</th>
+<th>Country</th>
+<th>Expected_Years_Of_Schooling</th>
+<th>Gni_Per_Capita_Rank_Minus_Hdi_Rank</th>
+<th>Gross_National_Income__Per_Capita</th>
+<th>Human_Development_Index__</th>
+<th>Life_Expectancy_At_Birth</th>
+<th>Mean_Years_Of_Schooling</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>1.0</td>
+<td>SWITZERLAND</td>
+<td>16.500299</td>
+<td>5</td>
+<td>66933.004540</td>
+<td>0.962</td>
+<td>83.9872</td>
+<td>13.859660</td>
+</tr>
+<tr>
+<th>1</th>
+<td>2.0</td>
+<td>NORWAY</td>
+<td>18.185200</td>
+<td>6</td>
+<td>64660.106220</td>
+<td>0.961</td>
+<td>83.2339</td>
+<td>13.003630</td>
+</tr>
+<tr>
+<th>2</th>
+<td>3.0</td>
+<td>ICELAND</td>
+<td>19.163059</td>
+<td>11</td>
+<td>55782.049810</td>
+<td>0.959</td>
+<td>82.6782</td>
+<td>13.767170</td>
+</tr>
+<tr>
+<th>3</th>
+<td>4.0</td>
+<td>HONG KONG, CHINA (SAR)</td>
+<td>17.278170</td>
+<td>6</td>
+<td>62606.845400</td>
+<td>0.952</td>
+<td>85.4734</td>
+<td>12.226210</td>
+</tr>
+<tr>
+<th>4</th>
+<td>5.0</td>
+<td>AUSTRALIA</td>
+<td>21.054590</td>
+<td>18</td>
+<td>49238.433350</td>
+<td>0.951</td>
+<td>84.5265</td>
+<td>12.726820</td>
+</tr>
+<tr>
+<th>...</th>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<th>186</th>
+<td>187.0</td>
+<td>BURUNDI</td>
+<td>10.722722</td>
+<td>4</td>
+<td>731.786709</td>
+<td>0.426</td>
+<td>61.6627</td>
+<td>3.129267</td>
+</tr>
+<tr>
+<th>187</th>
+<td>188.0</td>
+<td>CENTRAL AFRICAN REPUBLIC</td>
+<td>8.040172</td>
+<td>1</td>
+<td>966.058611</td>
+<td>0.404</td>
+<td>53.8947</td>
+<td>4.334000</td>
+</tr>
+<tr>
+<th>188</th>
+<td>189.0</td>
+<td>NIGER</td>
+<td>6.957112</td>
+<td>-3</td>
+<td>1239.866936</td>
+<td>0.400</td>
+<td>61.5763</td>
+<td>2.116717</td>
+</tr>
+<tr>
+<th>189</th>
+<td>190.0</td>
+<td>CHAD</td>
+<td>8.035914</td>
+<td>-7</td>
+<td>1364.169417</td>
+<td>0.394</td>
+<td>52.5254</td>
+<td>2.573774</td>
+</tr>
+<tr>
+<th>190</th>
+<td>191.0</td>
+<td>SOUTH SUDAN</td>
+<td>5.542510</td>
+<td>-1</td>
+<td>767.787000</td>
+<td>0.385</td>
+<td>54.9752</td>
+<td>5.726140</td>
+</tr>
+</tbody>
+</table>
+<p>191 rows × 8 columns</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Segunda-Parte">Segunda Parte<a class="anchor-link" href="#Segunda-Parte">¶</a></h1>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [187]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">=</span><span class="n">allDFsConcat</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="n">countryCodesLink</span> <span class="o">=</span> <span class="s1">'https://github.com/UK-Data-Science/tarea3nicole/raw/main/countryCODES.xlsx'</span>
+<span class="n">countryCodes</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">countryCodesLink</span><span class="p">)</span>
+<span class="n">countryCodes</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[187]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Country</th>
+<th>Officialstatename</th>
+<th>InternetccTLD</th>
+<th>iso2</th>
+<th>iso3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>AFGHANISTAN</td>
+<td>The Islamic Republic of Afghanistan</td>
+<td>.af</td>
+<td>AF</td>
+<td>AFG</td>
+</tr>
+<tr>
+<th>1</th>
+<td>ALBANIA</td>
+<td>The Republic of Albania</td>
+<td>.al</td>
+<td>AL</td>
+<td>ALB</td>
+</tr>
+<tr>
+<th>2</th>
+<td>ALGERIA</td>
+<td>The People's Democratic Republic of Algeria</td>
+<td>.dz</td>
+<td>DZ</td>
+<td>DZA</td>
+</tr>
+<tr>
+<th>3</th>
+<td>ANGOLA</td>
+<td>The Republic of Angola</td>
+<td>.ao</td>
+<td>AO</td>
+<td>AGO</td>
+</tr>
+<tr>
+<th>4</th>
+<td>ANTIGUA AND BARBUDA</td>
+<td>Antigua and Barbuda</td>
+<td>.ag</td>
+<td>AG</td>
+<td>ATG</td>
+</tr>
+<tr>
+<th>...</th>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<th>166</th>
+<td>UZBEKISTAN</td>
+<td>The Republic of Uzbekistan</td>
+<td>.uz</td>
+<td>UZ</td>
+<td>UZB</td>
+</tr>
+<tr>
+<th>167</th>
+<td>VIET NAM</td>
+<td>The Socialist Republic of Viet Nam</td>
+<td>.vn</td>
+<td>VN</td>
+<td>VNM</td>
+</tr>
+<tr>
+<th>168</th>
+<td>YEMEN</td>
+<td>The Republic of Yemen</td>
+<td>.ye</td>
+<td>YE</td>
+<td>YEM</td>
+</tr>
+<tr>
+<th>169</th>
+<td>ZAMBIA</td>
+<td>The Republic of Zambia</td>
+<td>.zm</td>
+<td>ZM</td>
+<td>ZMB</td>
+</tr>
+<tr>
+<th>170</th>
+<td>ZIMBABWE</td>
+<td>The Republic of Zimbabwe</td>
+<td>.zw</td>
+<td>ZW</td>
+<td>ZWE</td>
+</tr>
+</tbody>
+</table>
+<p>171 rows × 5 columns</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [188]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span><span class="n">countryCodes</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[188]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>((191, 8), (171, 5))</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [189]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Countries in 'countryCodes' but NOT in 'data'</span>
+<span class="n">onlyCodes</span><span class="o">=</span><span class="nb">set</span><span class="p">(</span><span class="n">countryCodes</span><span class="o">.</span><span class="n">Country</span><span class="p">)</span><span class="o">-</span><span class="nb">set</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Country</span><span class="p">)</span>
+<span class="n">onlyCodes</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[189]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>{'BAHAMAS (THE)',
+ 'CENTRAL AFRICAN REPUBLIC (THE)',
+ 'COMOROS (THE)',
+ 'CONGO (THE DEMOCRATIC REPUBLIC OF THE)',
+ 'CONGO (THE)',
+ "C√îTE D'IVOIRE",
+ 'DOMINICAN REPUBLIC (THE)',
+ 'ESWATINI',
+ 'GAMBIA (THE)',
+ 'KOREA (THE REPUBLIC OF)',
+ "LAO PEOPLE'S DEMOCRATIC REPUBLIC (THE)",
+ 'MOLDOVA (THE REPUBLIC OF)',
+ 'NETHERLANDS (THE)',
+ 'NIGER (THE)',
+ 'PHILIPPINES (THE)',
+ 'RUSSIAN FEDERATION (THE)',
+ 'SUDAN (THE)',
+ 'TANZANIA, THE UNITED REPUBLIC OF',
+ 'TURKEY',
+ 'UNITED ARAB EMIRATES (THE)',
+ 'UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND (THE)',
+ 'UNITED STATES MINOR OUTLYING ISLANDS (THE)'}</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [190]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Countries in 'data' but NOT in 'countryCodes'</span>
+<span class="n">onlyData</span><span class="o">=</span><span class="nb">set</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Country</span><span class="p">)</span><span class="o">-</span><span class="nb">set</span><span class="p">(</span><span class="n">countryCodes</span><span class="o">.</span><span class="n">Country</span><span class="p">)</span>
+<span class="n">onlyData</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[190]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>{'ANDORRA',
+ 'BAHAMAS',
+ 'CENTRAL AFRICAN REPUBLIC',
+ 'COMOROS',
+ 'CONGO',
+ 'CONGO (DEMOCRATIC REPUBLIC OF THE)',
+ "CÔTE D'IVOIRE",
+ 'DOMINICA',
+ 'DOMINICAN REPUBLIC',
+ 'ERITREA',
+ 'ESWATINI (KINGDOM OF)',
+ 'GAMBIA',
+ 'HONG KONG, CHINA (SAR)',
+ 'ISRAEL',
+ 'KIRIBATI',
+ 'KOREA (REPUBLIC OF)',
+ "LAO PEOPLE'S DEMOCRATIC REPUBLIC",
+ 'LIECHTENSTEIN',
+ 'MARSHALL ISLANDS',
+ 'MOLDOVA (REPUBLIC OF)',
+ 'NETHERLANDS',
+ 'NIGER',
+ 'PALAU',
+ 'PALESTINE, STATE OF',
+ 'PHILIPPINES',
+ 'RUSSIAN FEDERATION',
+ 'SAINT KITTS AND NEVIS',
+ 'SAINT LUCIA',
+ 'SAINT VINCENT AND THE GRENADINES',
+ 'SAN MARINO',
+ 'SOUTH AFRICA',
+ 'SUDAN',
+ 'SYRIAN ARAB REPUBLIC',
+ 'TANZANIA (UNITED REPUBLIC OF)',
+ 'TONGA',
+ 'TUVALU',
+ 'TÜRKIYE',
+ 'UNITED ARAB EMIRATES',
+ 'UNITED KINGDOM',
+ 'UNITED STATES',
+ 'VANUATU',
+ 'VENEZUELA (BOLIVARIAN REPUBLIC OF)'}</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Finding what countries in onlyData may match the ones in onlyCodes</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [191]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>thefuzz
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Requirement already satisfied: thefuzz in c:\users\patricia\anaconda3\envs\version\lib\site-packages (0.22.1)
+Requirement already satisfied: rapidfuzz&lt;4.0.0,&gt;=3.0.0 in c:\users\patricia\anaconda3\envs\version\lib\site-packages (from thefuzz) (3.9.1)
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [192]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">thefuzz</span> <span class="kn">import</span> <span class="n">process</span> <span class="k">as</span> <span class="n">fz</span>
+
+<span class="c1"># look for a country in OnlyCodes and return the most similar</span>
+<span class="p">[(</span><span class="n">c</span><span class="p">,</span><span class="n">fz</span><span class="o">.</span><span class="n">extractOne</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="n">onlyData</span><span class="p">))</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">onlyCodes</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[192]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>[('BAHAMAS (THE)', ('BAHAMAS', 90)),
+ ('CENTRAL AFRICAN REPUBLIC (THE)', ('CENTRAL AFRICAN REPUBLIC', 95)),
+ ('COMOROS (THE)', ('COMOROS', 90)),
+ ('CONGO (THE DEMOCRATIC REPUBLIC OF THE)',
+  ('CONGO (DEMOCRATIC REPUBLIC OF THE)', 95)),
+ ('CONGO (THE)', ('CONGO', 90)),
+ ("C√îTE D'IVOIRE", ("CÔTE D'IVOIRE", 96)),
+ ('DOMINICAN REPUBLIC (THE)', ('DOMINICAN REPUBLIC', 95)),
+ ('ESWATINI', ('ESWATINI (KINGDOM OF)', 90)),
+ ('GAMBIA (THE)', ('GAMBIA', 90)),
+ ('KOREA (THE REPUBLIC OF)', ('KOREA (REPUBLIC OF)', 95)),
+ ("LAO PEOPLE'S DEMOCRATIC REPUBLIC (THE)",
+  ("LAO PEOPLE'S DEMOCRATIC REPUBLIC", 95)),
+ ('MOLDOVA (THE REPUBLIC OF)', ('MOLDOVA (REPUBLIC OF)', 95)),
+ ('NETHERLANDS (THE)', ('NETHERLANDS', 95)),
+ ('NIGER (THE)', ('NIGER', 90)),
+ ('PHILIPPINES (THE)', ('PHILIPPINES', 95)),
+ ('RUSSIAN FEDERATION (THE)', ('RUSSIAN FEDERATION', 95)),
+ ('SUDAN (THE)', ('SUDAN', 90)),
+ ('TANZANIA, THE UNITED REPUBLIC OF', ('TANZANIA (UNITED REPUBLIC OF)', 95)),
+ ('TURKEY', ('TÜRKIYE', 67)),
+ ('UNITED ARAB EMIRATES (THE)', ('UNITED ARAB EMIRATES', 95)),
+ ('UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND (THE)',
+  ('UNITED KINGDOM', 90)),
+ ('UNITED STATES MINOR OUTLYING ISLANDS (THE)', ('UNITED STATES', 90))]</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [193]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#keeping the best ones</span>
+<span class="p">[(</span><span class="n">c</span><span class="p">,</span><span class="n">fz</span><span class="o">.</span><span class="n">extractOne</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">onlyData</span><span class="p">))</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">onlyCodes</span><span class="p">)</span>
+ <span class="k">if</span> <span class="n">fz</span><span class="o">.</span><span class="n">extractOne</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">onlyData</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">67</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[193]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>[('BAHAMAS (THE)', ('BAHAMAS', 90)),
+ ('CENTRAL AFRICAN REPUBLIC (THE)', ('CENTRAL AFRICAN REPUBLIC', 95)),
+ ('COMOROS (THE)', ('COMOROS', 90)),
+ ('CONGO (THE DEMOCRATIC REPUBLIC OF THE)',
+  ('CONGO (DEMOCRATIC REPUBLIC OF THE)', 95)),
+ ('CONGO (THE)', ('CONGO', 90)),
+ ("C√îTE D'IVOIRE", ("CÔTE D'IVOIRE", 96)),
+ ('DOMINICAN REPUBLIC (THE)', ('DOMINICAN REPUBLIC', 95)),
+ ('ESWATINI', ('ESWATINI (KINGDOM OF)', 90)),
+ ('GAMBIA (THE)', ('GAMBIA', 90)),
+ ('KOREA (THE REPUBLIC OF)', ('KOREA (REPUBLIC OF)', 95)),
+ ("LAO PEOPLE'S DEMOCRATIC REPUBLIC (THE)",
+  ("LAO PEOPLE'S DEMOCRATIC REPUBLIC", 95)),
+ ('MOLDOVA (THE REPUBLIC OF)', ('MOLDOVA (REPUBLIC OF)', 95)),
+ ('NETHERLANDS (THE)', ('NETHERLANDS', 95)),
+ ('NIGER (THE)', ('NIGER', 90)),
+ ('PHILIPPINES (THE)', ('PHILIPPINES', 95)),
+ ('RUSSIAN FEDERATION (THE)', ('RUSSIAN FEDERATION', 95)),
+ ('SUDAN (THE)', ('SUDAN', 90)),
+ ('TANZANIA, THE UNITED REPUBLIC OF', ('TANZANIA (UNITED REPUBLIC OF)', 95)),
+ ('TURKEY', ('TÜRKIYE', 67)),
+ ('UNITED ARAB EMIRATES (THE)', ('UNITED ARAB EMIRATES', 95)),
+ ('UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND (THE)',
+  ('UNITED KINGDOM', 90)),
+ ('UNITED STATES MINOR OUTLYING ISLANDS (THE)', ('UNITED STATES', 90))]</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [194]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#Creating a dictionary with the matches found</span>
+<span class="n">changesCodes</span><span class="o">=</span><span class="p">{</span><span class="n">c</span><span class="p">:</span><span class="n">fz</span><span class="o">.</span><span class="n">extractOne</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">onlyData</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+                 <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">onlyCodes</span><span class="p">)</span>
+                 <span class="k">if</span> <span class="n">fz</span><span class="o">.</span><span class="n">extractOne</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">onlyData</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span><span class="mi">67</span><span class="p">}</span>
+<span class="c1">#dict of matches</span>
+<span class="n">changesCodes</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[194]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>{'BAHAMAS (THE)': 'BAHAMAS',
+ 'CENTRAL AFRICAN REPUBLIC (THE)': 'CENTRAL AFRICAN REPUBLIC',
+ 'COMOROS (THE)': 'COMOROS',
+ 'CONGO (THE DEMOCRATIC REPUBLIC OF THE)': 'CONGO (DEMOCRATIC REPUBLIC OF THE)',
+ 'CONGO (THE)': 'CONGO',
+ "C√îTE D'IVOIRE": "CÔTE D'IVOIRE",
+ 'DOMINICAN REPUBLIC (THE)': 'DOMINICAN REPUBLIC',
+ 'ESWATINI': 'ESWATINI (KINGDOM OF)',
+ 'GAMBIA (THE)': 'GAMBIA',
+ 'KOREA (THE REPUBLIC OF)': 'KOREA (REPUBLIC OF)',
+ "LAO PEOPLE'S DEMOCRATIC REPUBLIC (THE)": "LAO PEOPLE'S DEMOCRATIC REPUBLIC",
+ 'MOLDOVA (THE REPUBLIC OF)': 'MOLDOVA (REPUBLIC OF)',
+ 'NETHERLANDS (THE)': 'NETHERLANDS',
+ 'NIGER (THE)': 'NIGER',
+ 'PHILIPPINES (THE)': 'PHILIPPINES',
+ 'RUSSIAN FEDERATION (THE)': 'RUSSIAN FEDERATION',
+ 'SUDAN (THE)': 'SUDAN',
+ 'TANZANIA, THE UNITED REPUBLIC OF': 'TANZANIA (UNITED REPUBLIC OF)',
+ 'TURKEY': 'TÜRKIYE',
+ 'UNITED ARAB EMIRATES (THE)': 'UNITED ARAB EMIRATES',
+ 'UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND (THE)': 'UNITED KINGDOM',
+ 'UNITED STATES MINOR OUTLYING ISLANDS (THE)': 'UNITED STATES'}</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [195]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#Replacing in countryCodes</span>
+<span class="n">countryCodes</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">to_replace</span><span class="o">=</span><span class="p">{</span><span class="s1">'Country'</span><span class="p">:</span><span class="n">changesCodes</span><span class="p">},</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Repeating the process</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [196]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># second try</span>
+
+<span class="n">onlyCodes</span><span class="o">=</span><span class="nb">set</span><span class="p">(</span><span class="n">countryCodes</span><span class="o">.</span><span class="n">Country</span><span class="p">)</span><span class="o">-</span><span class="nb">set</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Country</span><span class="p">)</span>
+<span class="n">onlyData</span><span class="o">=</span><span class="nb">set</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">Country</span><span class="p">)</span><span class="o">-</span><span class="nb">set</span><span class="p">(</span><span class="n">countryCodes</span><span class="o">.</span><span class="n">Country</span><span class="p">)</span>
+<span class="p">[(</span><span class="n">c</span><span class="p">,</span><span class="n">fz</span><span class="o">.</span><span class="n">extractOne</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="n">onlyData</span> <span class="p">))</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">onlyCodes</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[196]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>[]</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [197]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">datacodes</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">countryCodes</span><span class="p">)</span>
+<span class="n">datacodes</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[197]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Hdi_Rank</th>
+<th>Country</th>
+<th>Expected_Years_Of_Schooling</th>
+<th>Gni_Per_Capita_Rank_Minus_Hdi_Rank</th>
+<th>Gross_National_Income__Per_Capita</th>
+<th>Human_Development_Index__</th>
+<th>Life_Expectancy_At_Birth</th>
+<th>Mean_Years_Of_Schooling</th>
+<th>Officialstatename</th>
+<th>InternetccTLD</th>
+<th>iso2</th>
+<th>iso3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>1.0</td>
+<td>SWITZERLAND</td>
+<td>16.500299</td>
+<td>5</td>
+<td>66933.004540</td>
+<td>0.962</td>
+<td>83.9872</td>
+<td>13.859660</td>
+<td>The Swiss Confederation</td>
+<td>.ch</td>
+<td>CH</td>
+<td>CHE</td>
+</tr>
+<tr>
+<th>1</th>
+<td>2.0</td>
+<td>NORWAY</td>
+<td>18.185200</td>
+<td>6</td>
+<td>64660.106220</td>
+<td>0.961</td>
+<td>83.2339</td>
+<td>13.003630</td>
+<td>The Kingdom of Norway</td>
+<td>.no</td>
+<td>NO</td>
+<td>NOR</td>
+</tr>
+<tr>
+<th>2</th>
+<td>3.0</td>
+<td>ICELAND</td>
+<td>19.163059</td>
+<td>11</td>
+<td>55782.049810</td>
+<td>0.959</td>
+<td>82.6782</td>
+<td>13.767170</td>
+<td>Iceland</td>
+<td>.is</td>
+<td>IS</td>
+<td>ISL</td>
+</tr>
+<tr>
+<th>3</th>
+<td>5.0</td>
+<td>AUSTRALIA</td>
+<td>21.054590</td>
+<td>18</td>
+<td>49238.433350</td>
+<td>0.951</td>
+<td>84.5265</td>
+<td>12.726820</td>
+<td>The Commonwealth of Australia</td>
+<td>.au</td>
+<td>AU</td>
+<td>AUS</td>
+</tr>
+<tr>
+<th>4</th>
+<td>6.0</td>
+<td>DENMARK</td>
+<td>18.714800</td>
+<td>6</td>
+<td>60364.785950</td>
+<td>0.948</td>
+<td>81.3753</td>
+<td>12.960490</td>
+<td>The Kingdom of Denmark</td>
+<td>.dk</td>
+<td>DK</td>
+<td>DNK</td>
+</tr>
+<tr>
+<th>...</th>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<th>166</th>
+<td>187.0</td>
+<td>BURUNDI</td>
+<td>10.722722</td>
+<td>4</td>
+<td>731.786709</td>
+<td>0.426</td>
+<td>61.6627</td>
+<td>3.129267</td>
+<td>The Republic of Burundi</td>
+<td>.bi</td>
+<td>BI</td>
+<td>BDI</td>
+</tr>
+<tr>
+<th>167</th>
+<td>188.0</td>
+<td>CENTRAL AFRICAN REPUBLIC</td>
+<td>8.040172</td>
+<td>1</td>
+<td>966.058611</td>
+<td>0.404</td>
+<td>53.8947</td>
+<td>4.334000</td>
+<td>The Central African Republic</td>
+<td>.cf</td>
+<td>CF</td>
+<td>CAF</td>
+</tr>
+<tr>
+<th>168</th>
+<td>189.0</td>
+<td>NIGER</td>
+<td>6.957112</td>
+<td>-3</td>
+<td>1239.866936</td>
+<td>0.400</td>
+<td>61.5763</td>
+<td>2.116717</td>
+<td>The Republic of the Niger</td>
+<td>.ne</td>
+<td>NE</td>
+<td>NER</td>
+</tr>
+<tr>
+<th>169</th>
+<td>190.0</td>
+<td>CHAD</td>
+<td>8.035914</td>
+<td>-7</td>
+<td>1364.169417</td>
+<td>0.394</td>
+<td>52.5254</td>
+<td>2.573774</td>
+<td>The Republic of Chad</td>
+<td>.td</td>
+<td>TD</td>
+<td>TCD</td>
+</tr>
+<tr>
+<th>170</th>
+<td>191.0</td>
+<td>SOUTH SUDAN</td>
+<td>5.542510</td>
+<td>-1</td>
+<td>767.787000</td>
+<td>0.385</td>
+<td>54.9752</td>
+<td>5.726140</td>
+<td>The Republic of South Sudan</td>
+<td>.ss</td>
+<td>SS</td>
+<td>SSD</td>
+</tr>
+</tbody>
+</table>
+<p>171 rows × 12 columns</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [198]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">datacodes</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 171 entries, 0 to 170
+Data columns (total 12 columns):
+ #   Column                              Non-Null Count  Dtype  
+---  ------                              --------------  -----  
+ 0   Hdi_Rank                            171 non-null    float64
+ 1   Country                             171 non-null    object 
+ 2   Expected_Years_Of_Schooling         171 non-null    float64
+ 3   Gni_Per_Capita_Rank_Minus_Hdi_Rank  171 non-null    int64  
+ 4   Gross_National_Income__Per_Capita   171 non-null    float64
+ 5   Human_Development_Index__           171 non-null    float64
+ 6   Life_Expectancy_At_Birth            171 non-null    float64
+ 7   Mean_Years_Of_Schooling             171 non-null    float64
+ 8   Officialstatename                   171 non-null    object 
+ 9   InternetccTLD                       170 non-null    object 
+ 10  iso2                                170 non-null    object 
+ 11  iso3                                171 non-null    object 
+dtypes: float64(6), int64(1), object(5)
+memory usage: 16.2+ KB
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Tercera-Parte">Tercera Parte<a class="anchor-link" href="#Tercera-Parte">¶</a></h1>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [199]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># create data frame</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'https://github.com/UK-Data-Science/tarea3nicole/raw/main/fallecidosCOVID.csv'</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[199]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>FECHA_CORTE;FECHA_FALLECIMIENTO;EDAD_DECLARADA;SEXO;CLASIFICACION_DEF;DEPARTAMENTO;PROVINCIA;DISTRITO;UBIGEO;UUID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>20240317;20220219;63;MASCULINO;Criterio viroló...</td>
+</tr>
+<tr>
+<th>1</th>
+<td>20240317;20210529;74;MASCULINO;Criterio viroló...</td>
+</tr>
+<tr>
+<th>2</th>
+<td>20240317;20210623;72;FEMENINO;Criterio SINADEF...</td>
+</tr>
+<tr>
+<th>3</th>
+<td>20240317;20210824;85;MASCULINO;Criterio invest...</td>
+</tr>
+<tr>
+<th>4</th>
+<td>20240317;20210627;46;MASCULINO;Criterio viroló...</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [200]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># save the previous separated columns names</span>
+<span class="n">c</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">';'</span><span class="p">)</span>
+<span class="n">col</span><span class="o">=</span><span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [201]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># separate the data</span>
+<span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span><span class="s1">'a'</span><span class="p">},</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">';'</span><span class="p">,</span><span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 220918 entries, 0 to 220917
+Data columns (total 10 columns):
+ #   Column  Non-Null Count   Dtype 
+---  ------  --------------   ----- 
+ 0   0       220918 non-null  object
+ 1   1       220918 non-null  object
+ 2   2       220918 non-null  object
+ 3   3       220918 non-null  object
+ 4   4       220918 non-null  object
+ 5   5       220918 non-null  object
+ 6   6       220918 non-null  object
+ 7   7       220918 non-null  object
+ 8   8       220918 non-null  object
+ 9   9       220918 non-null  object
+dtypes: object(10)
+memory usage: 16.9+ MB
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [202]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># rename the columns</span>
+<span class="n">newCol</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="n">col</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="mi">1</span><span class="p">:</span><span class="n">col</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="mi">2</span><span class="p">:</span><span class="n">col</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="mi">3</span><span class="p">:</span><span class="n">col</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="mi">4</span><span class="p">:</span><span class="n">col</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span><span class="mi">5</span><span class="p">:</span><span class="n">col</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span><span class="mi">6</span><span class="p">:</span><span class="n">col</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span><span class="mi">7</span><span class="p">:</span><span class="n">col</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span><span class="mi">8</span><span class="p">:</span><span class="n">col</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span><span class="mi">9</span><span class="p">:</span><span class="n">col</span><span class="p">[</span><span class="mi">9</span><span class="p">]}</span>
+<span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">newCol</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 220918 entries, 0 to 220917
+Data columns (total 10 columns):
+ #   Column               Non-Null Count   Dtype 
+---  ------               --------------   ----- 
+ 0   FECHA_CORTE          220918 non-null  object
+ 1   FECHA_FALLECIMIENTO  220918 non-null  object
+ 2   EDAD_DECLARADA       220918 non-null  object
+ 3   SEXO                 220918 non-null  object
+ 4   CLASIFICACION_DEF    220918 non-null  object
+ 5   DEPARTAMENTO         220918 non-null  object
+ 6   PROVINCIA            220918 non-null  object
+ 7   DISTRITO             220918 non-null  object
+ 8   UBIGEO               220918 non-null  object
+ 9   UUID                 220918 non-null  object
+dtypes: object(10)
+memory usage: 16.9+ MB
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [203]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># select the useful columns</span>
+<span class="n">keep1</span><span class="o">=</span><span class="p">[</span><span class="s1">'FECHA_FALLECIMIENTO'</span><span class="p">]</span>
+<span class="n">dfSome1</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="n">keep1</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># transform the useful dates</span>
+
+<span class="n">dfSome1</span><span class="o">.</span><span class="n">FECHA_FALLECIMIENTO</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">dfSome1</span><span class="o">.</span><span class="n">FECHA_FALLECIMIENTO</span><span class="p">)</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">to_period</span><span class="p">(</span><span class="s1">'M'</span><span class="p">)</span>
+<span class="n">dfSome1</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[203]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>FECHA_FALLECIMIENTO</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>2022-02</td>
+</tr>
+<tr>
+<th>1</th>
+<td>2021-05</td>
+</tr>
+<tr>
+<th>2</th>
+<td>2021-06</td>
+</tr>
+<tr>
+<th>3</th>
+<td>2021-08</td>
+</tr>
+<tr>
+<th>4</th>
+<td>2021-06</td>
+</tr>
+<tr>
+<th>...</th>
+<td>...</td>
+</tr>
+<tr>
+<th>220913</th>
+<td>2020-08</td>
+</tr>
+<tr>
+<th>220914</th>
+<td>2020-10</td>
+</tr>
+<tr>
+<th>220915</th>
+<td>2020-05</td>
+</tr>
+<tr>
+<th>220916</th>
+<td>2021-04</td>
+</tr>
+<tr>
+<th>220917</th>
+<td>2020-08</td>
+</tr>
+</tbody>
+</table>
+<p>220918 rows × 1 columns</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [204]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># ddd a count column</span>
+<span class="n">dfSome1</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="s1">'NUM_FALLECIDOS'</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span>
+
+<span class="c1"># aggregate the column</span>
+<span class="n">varsAggregated</span><span class="o">=</span><span class="p">[</span><span class="s1">'NUM_FALLECIDOS'</span><span class="p">]</span>
+<span class="n">functionForVars</span><span class="o">=</span><span class="s1">'sum'</span>
+<span class="n">dfSome1</span><span class="o">=</span><span class="n">dfSome1</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'FECHA_FALLECIMIENTO'</span><span class="p">)[</span><span class="n">varsAggregated</span><span class="p">]</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">functionForVars</span><span class="p">)</span>
+<span class="n">dfSome1</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[204]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>NUM_FALLECIDOS</th>
+</tr>
+<tr>
+<th>FECHA_FALLECIMIENTO</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>2020-03</th>
+<td>181</td>
+</tr>
+<tr>
+<th>2020-04</th>
+<td>5134</td>
+</tr>
+<tr>
+<th>2020-05</th>
+<td>16363</td>
+</tr>
+<tr>
+<th>2020-06</th>
+<td>17462</td>
+</tr>
+<tr>
+<th>2020-07</th>
+<td>18501</td>
+</tr>
+<tr>
+<th>2020-08</th>
+<td>17668</td>
+</tr>
+<tr>
+<th>2020-09</th>
+<td>8437</td>
+</tr>
+<tr>
+<th>2020-10</th>
+<td>4471</td>
+</tr>
+<tr>
+<th>2020-11</th>
+<td>3229</td>
+</tr>
+<tr>
+<th>2020-12</th>
+<td>3885</td>
+</tr>
+<tr>
+<th>2021-01</th>
+<td>11175</td>
+</tr>
+<tr>
+<th>2021-02</th>
+<td>18645</td>
+</tr>
+<tr>
+<th>2021-03</th>
+<td>20691</td>
+</tr>
+<tr>
+<th>2021-04</th>
+<td>23110</td>
+</tr>
+<tr>
+<th>2021-05</th>
+<td>16692</td>
+</tr>
+<tr>
+<th>2021-06</th>
+<td>7722</td>
+</tr>
+<tr>
+<th>2021-07</th>
+<td>3481</td>
+</tr>
+<tr>
+<th>2021-08</th>
+<td>1850</td>
+</tr>
+<tr>
+<th>2021-09</th>
+<td>1140</td>
+</tr>
+<tr>
+<th>2021-10</th>
+<td>1066</td>
+</tr>
+<tr>
+<th>2021-11</th>
+<td>1107</td>
+</tr>
+<tr>
+<th>2021-12</th>
+<td>1283</td>
+</tr>
+<tr>
+<th>2022-01</th>
+<td>3562</td>
+</tr>
+<tr>
+<th>2022-02</th>
+<td>3503</td>
+</tr>
+<tr>
+<th>2022-03</th>
+<td>1299</td>
+</tr>
+<tr>
+<th>2022-04</th>
+<td>741</td>
+</tr>
+<tr>
+<th>2022-05</th>
+<td>625</td>
+</tr>
+<tr>
+<th>2022-06</th>
+<td>542</td>
+</tr>
+<tr>
+<th>2022-07</th>
+<td>1025</td>
+</tr>
+<tr>
+<th>2022-08</th>
+<td>1429</td>
+</tr>
+<tr>
+<th>2022-09</th>
+<td>892</td>
+</tr>
+<tr>
+<th>2022-10</th>
+<td>429</td>
+</tr>
+<tr>
+<th>2022-11</th>
+<td>272</td>
+</tr>
+<tr>
+<th>2022-12</th>
+<td>423</td>
+</tr>
+<tr>
+<th>2023-01</th>
+<td>371</td>
+</tr>
+<tr>
+<th>2023-02</th>
+<td>287</td>
+</tr>
+<tr>
+<th>2023-03</th>
+<td>295</td>
+</tr>
+<tr>
+<th>2023-04</th>
+<td>337</td>
+</tr>
+<tr>
+<th>2023-05</th>
+<td>323</td>
+</tr>
+<tr>
+<th>2023-06</th>
+<td>291</td>
+</tr>
+<tr>
+<th>2023-07</th>
+<td>258</td>
+</tr>
+<tr>
+<th>2023-08</th>
+<td>249</td>
+</tr>
+<tr>
+<th>2023-09</th>
+<td>60</td>
+</tr>
+<tr>
+<th>2023-10</th>
+<td>26</td>
+</tr>
+<tr>
+<th>2023-11</th>
+<td>33</td>
+</tr>
+<tr>
+<th>2023-12</th>
+<td>40</td>
+</tr>
+<tr>
+<th>2024-01</th>
+<td>249</td>
+</tr>
+<tr>
+<th>2024-02</th>
+<td>62</td>
+</tr>
+<tr>
+<th>2024-03</th>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [205]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">dfSome1</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [206]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">dfSome1</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[206]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>FECHA_FALLECIMIENTO</th>
+<th>NUM_FALLECIDOS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>2020-03</td>
+<td>181</td>
+</tr>
+<tr>
+<th>1</th>
+<td>2020-04</td>
+<td>5134</td>
+</tr>
+<tr>
+<th>2</th>
+<td>2020-05</td>
+<td>16363</td>
+</tr>
+<tr>
+<th>3</th>
+<td>2020-06</td>
+<td>17462</td>
+</tr>
+<tr>
+<th>4</th>
+<td>2020-07</td>
+<td>18501</td>
+</tr>
+<tr>
+<th>5</th>
+<td>2020-08</td>
+<td>17668</td>
+</tr>
+<tr>
+<th>6</th>
+<td>2020-09</td>
+<td>8437</td>
+</tr>
+<tr>
+<th>7</th>
+<td>2020-10</td>
+<td>4471</td>
+</tr>
+<tr>
+<th>8</th>
+<td>2020-11</td>
+<td>3229</td>
+</tr>
+<tr>
+<th>9</th>
+<td>2020-12</td>
+<td>3885</td>
+</tr>
+<tr>
+<th>10</th>
+<td>2021-01</td>
+<td>11175</td>
+</tr>
+<tr>
+<th>11</th>
+<td>2021-02</td>
+<td>18645</td>
+</tr>
+<tr>
+<th>12</th>
+<td>2021-03</td>
+<td>20691</td>
+</tr>
+<tr>
+<th>13</th>
+<td>2021-04</td>
+<td>23110</td>
+</tr>
+<tr>
+<th>14</th>
+<td>2021-05</td>
+<td>16692</td>
+</tr>
+<tr>
+<th>15</th>
+<td>2021-06</td>
+<td>7722</td>
+</tr>
+<tr>
+<th>16</th>
+<td>2021-07</td>
+<td>3481</td>
+</tr>
+<tr>
+<th>17</th>
+<td>2021-08</td>
+<td>1850</td>
+</tr>
+<tr>
+<th>18</th>
+<td>2021-09</td>
+<td>1140</td>
+</tr>
+<tr>
+<th>19</th>
+<td>2021-10</td>
+<td>1066</td>
+</tr>
+<tr>
+<th>20</th>
+<td>2021-11</td>
+<td>1107</td>
+</tr>
+<tr>
+<th>21</th>
+<td>2021-12</td>
+<td>1283</td>
+</tr>
+<tr>
+<th>22</th>
+<td>2022-01</td>
+<td>3562</td>
+</tr>
+<tr>
+<th>23</th>
+<td>2022-02</td>
+<td>3503</td>
+</tr>
+<tr>
+<th>24</th>
+<td>2022-03</td>
+<td>1299</td>
+</tr>
+<tr>
+<th>25</th>
+<td>2022-04</td>
+<td>741</td>
+</tr>
+<tr>
+<th>26</th>
+<td>2022-05</td>
+<td>625</td>
+</tr>
+<tr>
+<th>27</th>
+<td>2022-06</td>
+<td>542</td>
+</tr>
+<tr>
+<th>28</th>
+<td>2022-07</td>
+<td>1025</td>
+</tr>
+<tr>
+<th>29</th>
+<td>2022-08</td>
+<td>1429</td>
+</tr>
+<tr>
+<th>30</th>
+<td>2022-09</td>
+<td>892</td>
+</tr>
+<tr>
+<th>31</th>
+<td>2022-10</td>
+<td>429</td>
+</tr>
+<tr>
+<th>32</th>
+<td>2022-11</td>
+<td>272</td>
+</tr>
+<tr>
+<th>33</th>
+<td>2022-12</td>
+<td>423</td>
+</tr>
+<tr>
+<th>34</th>
+<td>2023-01</td>
+<td>371</td>
+</tr>
+<tr>
+<th>35</th>
+<td>2023-02</td>
+<td>287</td>
+</tr>
+<tr>
+<th>36</th>
+<td>2023-03</td>
+<td>295</td>
+</tr>
+<tr>
+<th>37</th>
+<td>2023-04</td>
+<td>337</td>
+</tr>
+<tr>
+<th>38</th>
+<td>2023-05</td>
+<td>323</td>
+</tr>
+<tr>
+<th>39</th>
+<td>2023-06</td>
+<td>291</td>
+</tr>
+<tr>
+<th>40</th>
+<td>2023-07</td>
+<td>258</td>
+</tr>
+<tr>
+<th>41</th>
+<td>2023-08</td>
+<td>249</td>
+</tr>
+<tr>
+<th>42</th>
+<td>2023-09</td>
+<td>60</td>
+</tr>
+<tr>
+<th>43</th>
+<td>2023-10</td>
+<td>26</td>
+</tr>
+<tr>
+<th>44</th>
+<td>2023-11</td>
+<td>33</td>
+</tr>
+<tr>
+<th>45</th>
+<td>2023-12</td>
+<td>40</td>
+</tr>
+<tr>
+<th>46</th>
+<td>2024-01</td>
+<td>249</td>
+</tr>
+<tr>
+<th>47</th>
+<td>2024-02</td>
+<td>62</td>
+</tr>
+<tr>
+<th>48</th>
+<td>2024-03</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Cuarta-Parte">Cuarta Parte<a class="anchor-link" href="#Cuarta-Parte">¶</a></h1>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [207]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># select the useful columns</span>
+<span class="n">keep1</span><span class="o">=</span><span class="p">[</span><span class="s1">'FECHA_FALLECIMIENTO'</span><span class="p">,</span><span class="s1">'CLASIFICACION_DEF'</span><span class="p">]</span>
+<span class="n">dfSome2</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="n">keep1</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">dfSome2</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[207]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>FECHA_FALLECIMIENTO</th>
+<th>CLASIFICACION_DEF</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>20220219</td>
+<td>Criterio virológico</td>
+</tr>
+<tr>
+<th>1</th>
+<td>20210529</td>
+<td>Criterio virológico</td>
+</tr>
+<tr>
+<th>2</th>
+<td>20210623</td>
+<td>Criterio SINADEF</td>
+</tr>
+<tr>
+<th>3</th>
+<td>20210824</td>
+<td>Criterio investigación Epidemiológica</td>
+</tr>
+<tr>
+<th>4</th>
+<td>20210627</td>
+<td>Criterio virológico</td>
+</tr>
+<tr>
+<th>...</th>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<th>220913</th>
+<td>20200809</td>
+<td>Criterio radiológico</td>
+</tr>
+<tr>
+<th>220914</th>
+<td>20201028</td>
+<td>Criterio clínico</td>
+</tr>
+<tr>
+<th>220915</th>
+<td>20200515</td>
+<td>Criterio SINADEF</td>
+</tr>
+<tr>
+<th>220916</th>
+<td>20210414</td>
+<td>Criterio clínico</td>
+</tr>
+<tr>
+<th>220917</th>
+<td>20200819</td>
+<td>Criterio nexo epidemiológico</td>
+</tr>
+</tbody>
+</table>
+<p>220918 rows × 2 columns</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [208]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># transform the useful dates</span>
+<span class="n">dfSome2</span><span class="o">.</span><span class="n">FECHA_FALLECIMIENTO</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">dfSome2</span><span class="o">.</span><span class="n">FECHA_FALLECIMIENTO</span><span class="p">)</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">to_period</span><span class="p">(</span><span class="s1">'M'</span><span class="p">)</span>
+<span class="n">dfSome2</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[208]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>FECHA_FALLECIMIENTO</th>
+<th>CLASIFICACION_DEF</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>2022-02</td>
+<td>Criterio virológico</td>
+</tr>
+<tr>
+<th>1</th>
+<td>2021-05</td>
+<td>Criterio virológico</td>
+</tr>
+<tr>
+<th>2</th>
+<td>2021-06</td>
+<td>Criterio SINADEF</td>
+</tr>
+<tr>
+<th>3</th>
+<td>2021-08</td>
+<td>Criterio investigación Epidemiológica</td>
+</tr>
+<tr>
+<th>4</th>
+<td>2021-06</td>
+<td>Criterio virológico</td>
+</tr>
+<tr>
+<th>...</th>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<th>220913</th>
+<td>2020-08</td>
+<td>Criterio radiológico</td>
+</tr>
+<tr>
+<th>220914</th>
+<td>2020-10</td>
+<td>Criterio clínico</td>
+</tr>
+<tr>
+<th>220915</th>
+<td>2020-05</td>
+<td>Criterio SINADEF</td>
+</tr>
+<tr>
+<th>220916</th>
+<td>2021-04</td>
+<td>Criterio clínico</td>
+</tr>
+<tr>
+<th>220917</th>
+<td>2020-08</td>
+<td>Criterio nexo epidemiológico</td>
+</tr>
+</tbody>
+</table>
+<p>220918 rows × 2 columns</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [209]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># verify if every clasification is valid</span>
+<span class="nb">set</span><span class="p">(</span><span class="n">dfSome2</span><span class="o">.</span><span class="n">CLASIFICACION_DEF</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[209]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>{'Criterio SINADEF',
+ 'Criterio clínico',
+ 'Criterio investigación Epidemiológica',
+ 'Criterio nexo epidemiológico',
+ 'Criterio radiológico',
+ 'Criterio serológico',
+ 'Criterio virológico',
+ 'NotiCovid',
+ 'sinadef'}</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [210]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># change sinadef data</span>
+<span class="n">dfSome2</span><span class="o">.</span><span class="n">CLASIFICACION_DEF</span><span class="p">[</span><span class="n">dfSome2</span><span class="o">.</span><span class="n">CLASIFICACION_DEF</span><span class="o">==</span><span class="s1">'sinadef'</span><span class="p">]</span><span class="o">=</span><span class="s1">'Criterio SINADEF'</span>
+<span class="nb">set</span><span class="p">(</span><span class="n">dfSome2</span><span class="o">.</span><span class="n">CLASIFICACION_DEF</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>C:\Users\PATRICIA\AppData\Local\Temp\ipykernel_13504\3057228880.py:2: FutureWarning: ChainedAssignmentError: behaviour will change in pandas 3.0!
+You are setting values through chained assignment. Currently this works in certain cases, but when using Copy-on-Write (which will become the default behaviour in pandas 3.0) this will never work to update the original DataFrame or Series, because the intermediate object on which we are setting values will behave as a copy.
+A typical example is when you are setting values in a column of a DataFrame, like:
+
+df["col"][row_indexer] = value
+
+Use `df.loc[row_indexer, "col"] = values` instead, to perform the assignment in a single step and ensure this keeps updating the original `df`.
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+
+  dfSome2.CLASIFICACION_DEF[dfSome2.CLASIFICACION_DEF=='sinadef']='Criterio SINADEF'
+C:\Users\PATRICIA\AppData\Local\Temp\ipykernel_13504\3057228880.py:2: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  dfSome2.CLASIFICACION_DEF[dfSome2.CLASIFICACION_DEF=='sinadef']='Criterio SINADEF'
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[210]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>{'Criterio SINADEF',
+ 'Criterio clínico',
+ 'Criterio investigación Epidemiológica',
+ 'Criterio nexo epidemiológico',
+ 'Criterio radiológico',
+ 'Criterio serológico',
+ 'Criterio virológico',
+ 'NotiCovid'}</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [211]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">dfSome2</span><span class="p">[</span><span class="s1">'YEAR'</span><span class="p">]</span><span class="o">=</span><span class="n">dfSome2</span><span class="o">.</span><span class="n">FECHA_FALLECIMIENTO</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span>
+<span class="n">dfSome2</span><span class="p">[</span><span class="s1">'MONTH'</span><span class="p">]</span><span class="o">=</span><span class="n">dfSome2</span><span class="o">.</span><span class="n">FECHA_FALLECIMIENTO</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [212]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">dfSome2_W</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">dfSome2</span><span class="p">,</span>
+                            <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">'MONTH'</span><span class="p">],</span>
+                            <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'CLASIFICACION_DEF'</span><span class="p">,</span><span class="s1">'YEAR'</span><span class="p">],</span>
+                            <span class="n">aggfunc</span><span class="o">=</span><span class="s1">'size'</span><span class="p">,</span>
+                            <span class="n">fill_value</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">newIndex</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="s1">'Ene'</span><span class="p">,</span><span class="mi">2</span><span class="p">:</span><span class="s1">'Feb'</span><span class="p">,</span><span class="mi">3</span><span class="p">:</span><span class="s1">'Mar'</span><span class="p">,</span><span class="mi">4</span><span class="p">:</span><span class="s1">'Abr'</span><span class="p">,</span><span class="mi">5</span><span class="p">:</span><span class="s1">'May'</span><span class="p">,</span><span class="mi">6</span><span class="p">:</span><span class="s1">'Jun'</span><span class="p">,</span><span class="mi">7</span><span class="p">:</span><span class="s1">'Jul'</span><span class="p">,</span><span class="mi">8</span><span class="p">:</span><span class="s1">'Ago'</span><span class="p">,</span><span class="mi">9</span><span class="p">:</span><span class="s1">'Sep'</span><span class="p">,</span><span class="mi">10</span><span class="p">:</span><span class="s1">'Oct'</span><span class="p">,</span><span class="mi">11</span><span class="p">:</span><span class="s1">'Nov'</span><span class="p">,</span><span class="mi">12</span><span class="p">:</span><span class="s1">'Dic'</span><span class="p">,}</span>
+<span class="n">dfSome2_W</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">newIndex</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">dfSome2_W</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[212]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+
+    .dataframe thead tr:last-of-type th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr>
+<th>CLASIFICACION_DEF</th>
+<th colspan="5" halign="left">Criterio SINADEF</th>
+<th colspan="4" halign="left">Criterio clínico</th>
+<th>Criterio investigación Epidemiológica</th>
+<th>...</th>
+<th colspan="3" halign="left">Criterio serológico</th>
+<th colspan="5" halign="left">Criterio virológico</th>
+<th colspan="2" halign="left">NotiCovid</th>
+</tr>
+<tr>
+<th>YEAR</th>
+<th>2020</th>
+<th>2021</th>
+<th>2022</th>
+<th>2023</th>
+<th>2024</th>
+<th>2020</th>
+<th>2021</th>
+<th>2022</th>
+<th>2023</th>
+<th>2020</th>
+<th>...</th>
+<th>2020</th>
+<th>2021</th>
+<th>2022</th>
+<th>2020</th>
+<th>2021</th>
+<th>2022</th>
+<th>2023</th>
+<th>2024</th>
+<th>2023</th>
+<th>2024</th>
+</tr>
+<tr>
+<th>MONTH</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>Ene</th>
+<td>0</td>
+<td>2190</td>
+<td>1894</td>
+<td>34</td>
+<td>51</td>
+<td>0</td>
+<td>514</td>
+<td>22</td>
+<td>1</td>
+<td>0</td>
+<td>...</td>
+<td>0</td>
+<td>2448</td>
+<td>41</td>
+<td>0</td>
+<td>5159</td>
+<td>1605</td>
+<td>336</td>
+<td>83</td>
+<td>0</td>
+<td>115</td>
+</tr>
+<tr>
+<th>Feb</th>
+<td>0</td>
+<td>4993</td>
+<td>1604</td>
+<td>4</td>
+<td>1</td>
+<td>0</td>
+<td>501</td>
+<td>20</td>
+<td>0</td>
+<td>0</td>
+<td>...</td>
+<td>0</td>
+<td>2539</td>
+<td>1</td>
+<td>0</td>
+<td>9441</td>
+<td>1878</td>
+<td>283</td>
+<td>45</td>
+<td>0</td>
+<td>16</td>
+</tr>
+<tr>
+<th>Mar</th>
+<td>35</td>
+<td>6100</td>
+<td>352</td>
+<td>6</td>
+<td>0</td>
+<td>52</td>
+<td>525</td>
+<td>6</td>
+<td>0</td>
+<td>25</td>
+<td>...</td>
+<td>2</td>
+<td>1703</td>
+<td>0</td>
+<td>58</td>
+<td>11161</td>
+<td>941</td>
+<td>289</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<th>Abr</th>
+<td>1793</td>
+<td>7450</td>
+<td>131</td>
+<td>17</td>
+<td>0</td>
+<td>541</td>
+<td>748</td>
+<td>9</td>
+<td>0</td>
+<td>498</td>
+<td>...</td>
+<td>778</td>
+<td>1488</td>
+<td>0</td>
+<td>1274</td>
+<td>12224</td>
+<td>601</td>
+<td>320</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<th>May</th>
+<td>6826</td>
+<td>5225</td>
+<td>85</td>
+<td>6</td>
+<td>0</td>
+<td>1152</td>
+<td>628</td>
+<td>3</td>
+<td>0</td>
+<td>1427</td>
+<td>...</td>
+<td>3233</td>
+<td>1175</td>
+<td>0</td>
+<td>3042</td>
+<td>8877</td>
+<td>537</td>
+<td>317</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<th>Jun</th>
+<td>5722</td>
+<td>2723</td>
+<td>81</td>
+<td>2</td>
+<td>0</td>
+<td>670</td>
+<td>116</td>
+<td>3</td>
+<td>0</td>
+<td>1706</td>
+<td>...</td>
+<td>5605</td>
+<td>746</td>
+<td>0</td>
+<td>3117</td>
+<td>3825</td>
+<td>458</td>
+<td>289</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<th>Jul</th>
+<td>5012</td>
+<td>1025</td>
+<td>299</td>
+<td>3</td>
+<td>0</td>
+<td>609</td>
+<td>113</td>
+<td>3</td>
+<td>0</td>
+<td>1512</td>
+<td>...</td>
+<td>7501</td>
+<td>521</td>
+<td>0</td>
+<td>3190</td>
+<td>1652</td>
+<td>723</td>
+<td>255</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<th>Ago</th>
+<td>4589</td>
+<td>578</td>
+<td>405</td>
+<td>7</td>
+<td>0</td>
+<td>611</td>
+<td>75</td>
+<td>6</td>
+<td>0</td>
+<td>1456</td>
+<td>...</td>
+<td>7400</td>
+<td>287</td>
+<td>0</td>
+<td>2870</td>
+<td>837</td>
+<td>1018</td>
+<td>242</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<th>Sep</th>
+<td>1984</td>
+<td>554</td>
+<td>154</td>
+<td>7</td>
+<td>0</td>
+<td>475</td>
+<td>12</td>
+<td>12</td>
+<td>0</td>
+<td>755</td>
+<td>...</td>
+<td>3483</td>
+<td>190</td>
+<td>0</td>
+<td>1402</td>
+<td>384</td>
+<td>726</td>
+<td>53</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<th>Oct</th>
+<td>1091</td>
+<td>469</td>
+<td>53</td>
+<td>8</td>
+<td>0</td>
+<td>463</td>
+<td>12</td>
+<td>59</td>
+<td>0</td>
+<td>469</td>
+<td>...</td>
+<td>1417</td>
+<td>148</td>
+<td>0</td>
+<td>809</td>
+<td>437</td>
+<td>317</td>
+<td>18</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<th>Nov</th>
+<td>704</td>
+<td>441</td>
+<td>23</td>
+<td>13</td>
+<td>0</td>
+<td>462</td>
+<td>16</td>
+<td>0</td>
+<td>0</td>
+<td>307</td>
+<td>...</td>
+<td>867</td>
+<td>157</td>
+<td>0</td>
+<td>666</td>
+<td>493</td>
+<td>249</td>
+<td>20</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<th>Dic</th>
+<td>802</td>
+<td>585</td>
+<td>66</td>
+<td>17</td>
+<td>0</td>
+<td>547</td>
+<td>8</td>
+<td>0</td>
+<td>0</td>
+<td>171</td>
+<td>...</td>
+<td>1047</td>
+<td>133</td>
+<td>0</td>
+<td>1098</td>
+<td>557</td>
+<td>357</td>
+<td>22</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>12 rows × 25 columns</p>
+</div>
 </div>
 </div>
 </div>
